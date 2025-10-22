@@ -45,8 +45,9 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 40),
               Center(
-                child: Image.asset(AppImages.logo, height: media.height * 0.30),
+                child: Image.asset(AppImages.logo, height: media.height * 0.15),
               ),
               Center(
                 child: Text(
@@ -162,17 +163,17 @@ class _SignInScreenState extends State<SignInScreen> {
                 return GlobalButton(
                   text: "Sign In",
                   buttonColor: isEnabled ? Colors.blue : Colors.grey.shade400,
-                  // onPressed: isEnabled
-                  //     ? () {
-
-                  //         if (_formKey.currentState?.validate() ?? false) {
-                  //           Get.toNamed('/enableLocationScreen');
-                  //         }
-                  //       }
-                  //     : null,
-                  onPressed: () {
-                    Get.toNamed('/enableLocationScreen');
-                  },
+                  onPressed:
+                      isEnabled
+                          ? () {
+                            if (_formKey.currentState?.validate() ?? false) {
+                              Get.toNamed('/enableLocationScreen');
+                            }
+                          }
+                          : null,
+                  // onPressed: () {
+                  //   Get.toNamed('/enableLocationScreen');
+                  // },
                 );
               }),
 

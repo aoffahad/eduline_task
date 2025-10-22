@@ -2,7 +2,7 @@ import 'package:eduline/core/constant/image_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../widgets/button_widget.dart'; 
+import '../../widgets/button_widget.dart';
 
 class SelectLanguageScreen extends StatefulWidget {
   @override
@@ -14,15 +14,15 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
 
   final List<Map<String, String>> languages = [
     {'country': 'English (US)', 'flag': AppImages.flagUsa},
-    {'country': 'Spanish', 'flag': AppImages.flagUsa},
-    {'country': 'French', 'flag': AppImages.flagUsa},
-    {'country': 'German', 'flag': AppImages.flagUsa},
-    {'country': 'Chinese', 'flag': AppImages.flagUsa},
-    {'country': 'Indonesia', 'flag': AppImages.flagUsa},
-    {'country': 'Afghanistan', 'flag': AppImages.flagUsa},
-    {'country': 'Algeria', 'flag': AppImages.flagUsa},
-    {'country': 'Malaysia', 'flag': AppImages.flagUsa},
-    {'country': 'Arabic', 'flag': AppImages.flagUsa},
+    {'country': 'Indonesia', 'flag': AppImages.flagIndonesia},
+    {'country': 'Afghanistan', 'flag': AppImages.flagAfg},
+    {'country': 'Algeria', 'flag': AppImages.flagAlgeria},
+    {'country': 'Malaysia', 'flag': AppImages.flagMalaysia},
+    {'country': 'Arabic', 'flag': AppImages.flagUAE},
+    // {'country': 'Afghanistan', 'flag': AppImages.flagUsa},
+    // {'country': 'Algeria', 'flag': AppImages.flagUsa},
+    // {'country': 'Malaysia', 'flag': AppImages.flagUsa},
+    // {'country': 'Arabic', 'flag': AppImages.flagUsa},
   ];
 
   @override

@@ -1,8 +1,9 @@
+import 'package:eduline/core/constant/color_constants.dart';
 import 'package:eduline/core/constant/image_constants.dart';
 import 'package:eduline/presentation/screens/onbording_screen/controller/onboarding_controller.dart';
+import 'package:eduline/presentation/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:eduline/presentation/widgets/button_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -26,6 +27,7 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       body: Column(
         children: [
           Expanded(
@@ -41,13 +43,11 @@ class OnboardingScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(item['image']!, height: 450, width: 300),
-
-            
                       Text(
                         item['title']!,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.inter(
-                         fontSize: 20,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -63,6 +63,8 @@ class OnboardingScreen extends StatelessWidget {
               },
             ),
           ),
+
+          // Page indicators
           Obx(
             () => Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -84,11 +86,20 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
           ),
+
           const SizedBox(height: 30),
-          GlobalButton(
-            text: controller.currentPage.value == 1 ? "Get Started" : "Next",
-            onPressed: controller.nextPage,
+
+          // ✅ Button wrapped in Obx to rebuild text dynamically
+          Obx(
+            () => GlobalButton(
+              text:
+                  controller.currentPage.value == onboardingData.length - 1
+                      ? "Get Started"
+                      : "Next",
+              onPressed: controller.nextPage,
+            ),
           ),
+
           const SizedBox(height: 30),
         ],
       ),

@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               Image.asset(AppImages.splashScreen, height: 350),
+                Image.asset(AppImages.splashScreen, height: 150),
                 const SizedBox(height: 30),
                 Text(
                   "Theory test in my language",
@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 15),
-                 Text(
+                Text(
                   "I must write the real test will be in English language and this app just helps you to understand the materials in your language",
                   style: FontStyles.interText14W400TextSecondary,
                   textAlign: TextAlign.center,
