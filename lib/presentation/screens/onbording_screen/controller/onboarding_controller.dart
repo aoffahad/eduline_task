@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:eduline/core/routes/routes.dart';
 
 class OnboardingController extends GetxController {
   final pageController = PageController();
@@ -12,7 +13,7 @@ class OnboardingController extends GetxController {
         curve: Curves.easeInOut,
       );
     } else {
-      Get.offAllNamed('/signin');
+      Get.offAllNamed(AppRoutes.login);
     }
   }
 

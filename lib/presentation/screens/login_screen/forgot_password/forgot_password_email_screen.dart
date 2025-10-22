@@ -24,7 +24,7 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final media = MediaQuery.of(context).size;
+    // final media = MediaQuery.of(context).size;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -63,7 +63,6 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-
               ),
               SizedBox(height: 30),
               Text(
@@ -80,9 +79,7 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
                 labelText: "Email",
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
-                validator:
-                    AppValidators
-                        .email, 
+                validator: AppValidators.email,
               ),
               SizedBox(height: 30),
               GlobalButton(

@@ -55,14 +55,13 @@ class SignUpController extends GetxController {
   }
 
   void onSignUp() {
-    // Validate all fields first, then process
     validateEmail(emailController.text);
     validateName(nameController.text);
     validatePassword(passwordController.text);
     if (emailError.value.isEmpty &&
         nameError.value.isEmpty &&
         passwordError.value.isEmpty) {
-      // Do sign up
+      
     }
   }
 }

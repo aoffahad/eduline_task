@@ -1,3 +1,4 @@
+import 'package:eduline/core/constant/image_constants.dart';
 import 'package:eduline/presentation/widgets/global_popup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -229,7 +230,7 @@ class SignUpScreen extends StatelessWidget {
                       Get.dialog(
                         GlobalPopup(
                           imageWidget: Image.asset(
-                            "images/signup_successfull.png",
+                            AppImages.regSuccessfull,
                           ),
                           title: 'Successfully Registered',
                           description:

@@ -1,3 +1,5 @@
+import 'package:eduline/core/constant/image_constants.dart';
+import 'package:eduline/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +18,7 @@ class EnableLocationScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "images/location_image.png",
+              AppImages.enableLocation,
               width: media.width * 0.5,
               height: media.width * 0.5,
               fit: BoxFit.contain,
@@ -41,14 +43,14 @@ class EnableLocationScreen extends StatelessWidget {
             GlobalButton(
               text: "Enable",
               onPressed: () {
-                Get.toNamed('/selectLanguage');
+                Get.toNamed(AppRoutes.selectLanguage);
               },
               buttonColor: Color(0xff2563eb),
             ),
             SizedBox(height: 18),
             GestureDetector(
               onTap: () {
-                Get.toNamed('/selectLanguage');
+                Get.toNamed(AppRoutes.selectLanguage);
               },
               child: Text(
                 "Skip, Not Now",
