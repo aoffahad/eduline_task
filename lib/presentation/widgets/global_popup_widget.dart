@@ -21,7 +21,7 @@ class GlobalPopup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Responsive width: 80% of screen, max 360
-    final popupWidth = MediaQuery.of(context).size.width * 0.8;
+    // final popupWidth = MediaQuery.of(context).size.width * 0.8;
     return Dialog(
       backgroundColor: Colors.white,
       insetPadding: EdgeInsets.symmetric(horizontal: 18, vertical: 24),

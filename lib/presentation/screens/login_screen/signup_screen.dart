@@ -16,12 +16,10 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final media = MediaQuery.of(context).size;
+    // final media = MediaQuery.of(context).size;
 
-    // 🔹 This reactive variable will control button enable state
     final RxBool isFormFilled = false.obs;
 
-    // 🔹 Helper: Update button enable state whenever any field changes
     void updateFormState() {
       isFormFilled.value =
           controller.emailController.text.isNotEmpty &&

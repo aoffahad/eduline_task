@@ -1,11 +1,9 @@
 import 'package:eduline/core/constant/font_style.dart';
 import 'package:eduline/core/constant/image_constants.dart';
-import 'package:eduline/presentation/screens/onbording_screen/controller/splash_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
-  final SplashController _controller = Get.put(SplashController());
+  // final SplashController _controller = Get.put(SplashController());
 
   @override
   Widget build(BuildContext context) {
